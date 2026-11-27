@@ -10,9 +10,10 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Products from './pages/Products';
 import ProductDetail from './pages/ProductDetail';
-import Wholesale from './pages/Wholesale';
 import Quality from './pages/Quality';
 import Contact from './pages/Contact';
+import Services from './pages/Services';
+import ServiceDetail from './pages/ServiceDetail';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -57,7 +58,9 @@ export default function App() {
             <Route path="/about" element={<About onOpenEnquiry={handleOpenEnquiry} />} />
             <Route path="/products" element={<Products onOpenEnquiry={handleOpenEnquiry} />} />
             <Route path="/products/:id" element={<ProductDetail onOpenEnquiry={handleOpenEnquiry} />} />
-            <Route path="/wholesale" element={<Wholesale onOpenEnquiry={handleOpenEnquiry} />} />
+            <Route path="/services" element={<Services onOpenEnquiry={handleOpenEnquiry} />} />
+            <Route path="/services/:id" element={<ServiceDetail onOpenEnquiry={handleOpenEnquiry} />} />
+            <Route path="/wholesale" element={<Navigate to="/services" replace />} />
             <Route path="/quality" element={<Quality onOpenEnquiry={handleOpenEnquiry} />} />
             <Route path="/contact" element={<Contact onOpenEnquiry={handleOpenEnquiry} />} />
             <Route path="*" element={<Navigate to="/" replace />} />

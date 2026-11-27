@@ -24,7 +24,7 @@ export default function Navbar({ onOpenEnquiry }) {
     { label: 'Home', path: '/' },
     { label: 'About Us', path: '/about' },
     { label: 'Our Honey', path: '/products' },
-    { label: 'Wholesale & Bulk Supply', path: '/wholesale' },
+    { label: 'Services', path: '/services' },
     { label: 'Quality & Sourcing', path: '/quality' },
     { label: 'Contact Us', path: '/contact' },
   ];
@@ -200,7 +200,7 @@ export default function Navbar({ onOpenEnquiry }) {
                 <button
                   onClick={() => {
                     setMobileMenuOpen(false);
-                    onOpenEnquiry && onOpenEnquiry('Mobile Wholesale Button');
+                    if (onOpenEnquiry) onOpenEnquiry('Mobile Wholesale Button');
                   }}
                   className="w-full py-3.5 px-4 rounded-xl bg-[#D49B28] text-[#102B23] font-bold text-sm uppercase tracking-wider flex items-center justify-center gap-2 shadow-md cursor-pointer"
                 >

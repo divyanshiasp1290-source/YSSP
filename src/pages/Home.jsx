@@ -234,10 +234,10 @@ export default function Home({ onOpenEnquiry }) {
                 </Link>
 
                 <Link
-                  to="/wholesale"
+                  to="/services"
                   className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-white text-[#183D32] hover:bg-stone-100 border border-stone-300 text-sm font-bold tracking-wide transition-all shadow-2xs"
                 >
-                  <span>Wholesale &amp; Bulk Supply</span>
+                  <span>Services &amp; Bulk Supply</span>
                 </Link>
               </div>
             </div>
@@ -407,10 +407,10 @@ export default function Home({ onOpenEnquiry }) {
           {/* Simple Bottom CTA Banner */}
           <div className="mt-14 text-center">
             <Link
-              to="/wholesale"
+              to="/services"
               className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-[#183D32] hover:bg-[#225344] text-white text-sm font-bold tracking-wide shadow-md transition-all"
             >
-              <span>Discuss Wholesale &amp; Bulk Supply</span>
+              <span>Explore Commercial Services &amp; Bulk Supply</span>
               <ArrowRight className="w-4 h-4 text-[#D49B28]" />
             </Link>
           </div>

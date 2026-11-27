@@ -62,7 +62,7 @@ export default function Footer({ onOpenEnquiry }) {
                 <Link to="/products" className="hover:text-[#D49B28] transition-colors">Our Honey Range</Link>
               </li>
               <li>
-                <Link to="/wholesale" className="hover:text-[#D49B28] transition-colors">Wholesale &amp; Bulk</Link>
+                <Link to="/services" className="hover:text-[#D49B28] transition-colors">Services &amp; Wholesale</Link>
               </li>
               <li>
                 <Link to="/quality" className="hover:text-[#D49B28] transition-colors">Quality &amp; Sourcing</Link>

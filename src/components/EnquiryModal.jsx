@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { X, CheckCircle, ShieldCheck, Mail, Send, AlertCircle, ArrowRight } from 'lucide-react';
 import { BRAND_INFO } from '../data/honeyData';
 
@@ -13,6 +13,16 @@ export default function EnquiryModal({ isOpen, onClose, initialProduct = '', def
     volumeEstimate: '1 to 2 Pallets (approx. 1–2 Tonnes)',
     message: ''
   });
+
+  useEffect(() => {
+    if (isOpen) {
+      setFormData((prev) => ({
+        ...prev,
+        productInterest: initialProduct || prev.productInterest,
+        enquiryType: defaultType || prev.enquiryType
+      }));
+    }
+  }, [isOpen, initialProduct, defaultType]);
 
   const [errors, setErrors] = useState({});
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -229,8 +239,11 @@ export default function EnquiryModal({ isOpen, onClose, initialProduct = '', def
                     >
                       <option value="General Enquiry">General Enquiry</option>
                       <option value="Wholesale Enquiry">Wholesale Enquiry</option>
-                      <option value="Bulk Honey Enquiry">Bulk Honey Enquiry</option>
-                      <option value="Private Label Enquiry">Private Label Enquiry</option>
+                      <option value="Bulk Honey Enquiry">Bulk Honey Supply</option>
+                      <option value="Private Label Enquiry">Private Label & Contract Packing</option>
+                      <option value="Service Enquiry">Commercial Service Enquiry</option>
+                      <option value="Honey Export">Honey Export</option>
+                      <option value="Custom Supply">Custom Honey Supply Solution</option>
                       <option value="Other">Other</option>
                     </select>
                   </div>
