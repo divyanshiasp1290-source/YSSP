@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, ArrowUpRight, Phone, Mail, ChevronRight, Droplets } from 'lucide-react';
-import { BRAND_INFO } from '../data/honeyData';
+import { Menu, X, ArrowUpRight, Mail, ChevronRight } from 'lucide-react';
 
 export default function Navbar({ onOpenEnquiry }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -38,20 +37,17 @@ export default function Navbar({ onOpenEnquiry }) {
   return (
     <>
       {/* Top Professional Announcement Strip */}
-      <div className="bg-[#102B23] text-[#E3EADF] text-[11px] sm:text-xs py-1.5 px-4 border-b border-[#1F4C3F]/40">
+      <div className="bg-[#102B23] text-[#E3EADF] text-xs py-2 px-4 border-b border-[#1F4C3F]/40">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-1 sm:gap-4">
-          <div className="flex items-center gap-2">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#D49B28] animate-pulse"></span>
-            <span className="tracking-wide text-stone-200">
-              100% Pure Australian Raw Honey • Unheated &amp; Single-Origin
-            </span>
-          </div>
-          <div className="hidden md:flex items-center gap-6 text-[#E3EADF]/90 text-[11px]">
-            <a href="mailto:wholesale@ysspartners.com" className="flex items-center gap-1.5 hover:text-[#D49B28] transition-colors">
-              <Mail className="w-3 h-3 text-[#D49B28]" />
+          <span className="tracking-wide text-stone-200">
+            100% Pure Australian Raw Honey • Unheated &amp; Single-Origin
+          </span>
+          <div className="hidden md:flex items-center gap-5 text-[#E3EADF]/90 text-xs">
+            <a href="mailto:wholesale@ysspartners.com" className="flex items-center gap-1.5 hover:text-[#D49B28] transition-colors rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#D49B28]">
+              <Mail className="w-3.5 h-3.5 text-[#D49B28]" aria-hidden="true" />
               <span>wholesale@ysspartners.com</span>
             </a>
-            <span className="text-[#D49B28]/60">•</span>
+            <span className="text-[#D49B28]/60" aria-hidden="true">•</span>
             <span>Sydney, Australia</span>
           </div>
         </div>
@@ -69,7 +65,7 @@ export default function Navbar({ onOpenEnquiry }) {
           {/* Brand Logo & Title */}
           <Link
             to="/"
-            className="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-[#D49B28] rounded-lg p-1"
+            className="flex items-center gap-3 group focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#D49B28] rounded-lg p-1"
             aria-label="YSSP Australian Honey Home"
           >
             <div className="w-10 h-10 rounded-full bg-[#0D221C] border border-[#D49B28]/50 flex items-center justify-center overflow-hidden shrink-0 shadow-inner group-hover:border-[#D49B28] transition-colors">
@@ -80,16 +76,11 @@ export default function Navbar({ onOpenEnquiry }) {
               />
             </div>
             <div className="flex flex-col">
-              <div className="flex items-center gap-2">
-                <span className="font-serif text-xl sm:text-2xl font-bold tracking-tight text-white leading-tight">
-                  YSSP
-                </span>
-                <span className="text-[11px] uppercase tracking-widest text-[#D49B28] font-bold px-1.5 py-0.5 rounded bg-[#0D221C]/80 border border-[#D49B28]/30">
-                  Raw Honey
-                </span>
-              </div>
-              <span className="text-[10px] sm:text-[11px] text-[#E3EADF]/75 tracking-wider uppercase font-medium">
-                Pure Australian Origin
+              <span className="text-xl sm:text-2xl font-bold tracking-tight text-white leading-tight">
+                YSSP
+              </span>
+              <span className="text-xs text-[#D49B28] tracking-wide font-medium">
+                Australian Raw Honey
               </span>
             </div>
           </Link>
@@ -102,7 +93,7 @@ export default function Navbar({ onOpenEnquiry }) {
                 <Link
                   key={item.path}
                   to={item.path}
-                  className={`px-3 py-2 text-sm font-medium rounded-md transition-all duration-200 ${
+                  className={`px-3 py-2 text-sm font-medium rounded-md transition-all duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#D49B28] ${
                     active
                       ? 'text-[#D49B28] bg-[#0D221C]/60 shadow-2xs font-semibold'
                       : 'text-[#F8F5EC] hover:text-[#D49B28] hover:bg-[#1F4C3F]/50'
@@ -117,8 +108,9 @@ export default function Navbar({ onOpenEnquiry }) {
           {/* Header Action Button (Desktop) */}
           <div className="hidden lg:flex items-center gap-3">
             <button
+              type="button"
               onClick={() => onOpenEnquiry && onOpenEnquiry('General Wholesale')}
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#D49B28] text-[#102B23] hover:bg-[#E5A83B] text-xs font-bold uppercase tracking-wider shadow-sm hover:shadow-md transition-all duration-200 transform hover:-translate-y-0.5 cursor-pointer"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#D49B28] text-[#102B23] hover:bg-[#E5A83B] text-xs font-bold uppercase tracking-wider shadow-sm hover:shadow-md transition-all duration-200 transform hover:-translate-y-0.5 cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
             >
               <span>Wholesale Enquiry</span>
               <ArrowUpRight className="w-3.5 h-3.5" />
@@ -128,15 +120,16 @@ export default function Navbar({ onOpenEnquiry }) {
           {/* Mobile Hamburger Toggle */}
           <div className="flex items-center gap-2 lg:hidden">
             <button
+              type="button"
               onClick={() => onOpenEnquiry && onOpenEnquiry('Mobile Header')}
-              className="px-3 py-1.5 text-xs font-bold tracking-wide uppercase rounded-full bg-[#D49B28] text-[#102B23]"
+              className="px-3.5 py-2 text-xs font-bold tracking-wide uppercase rounded-full bg-[#D49B28] text-[#102B23] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
             >
               Enquire
             </button>
             <button
               type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 rounded-lg text-[#F8F5EC] hover:bg-[#1F4C3F] focus:outline-none focus:ring-2 focus:ring-[#D49B28]"
+              className="p-2 rounded-lg text-[#F8F5EC] hover:bg-[#1F4C3F] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#D49B28]"
               aria-expanded={mobileMenuOpen}
               aria-label="Toggle navigation menu"
             >
@@ -162,13 +155,13 @@ export default function Navbar({ onOpenEnquiry }) {
                     <img src="/images/yssp-logo.png" alt="Logo" className="w-full h-full object-cover" />
                   </div>
                   <div>
-                    <div className="font-serif font-bold text-lg text-white">YSSP Raw Honey</div>
-                    <div className="text-[10px] text-[#D49B28] tracking-widest uppercase">Pure Australian Origin</div>
+                    <div className="font-bold text-lg text-white">YSSP Raw Honey</div>
+                    <div className="text-xs text-[#D49B28] tracking-wide">Australian Raw Honey</div>
                   </div>
                 </div>
                 <button
                   onClick={() => setMobileMenuOpen(false)}
-                  className="p-2 rounded-md text-stone-300 hover:text-white"
+                  className="p-2 rounded-md text-stone-300 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#D49B28]"
                   aria-label="Close menu"
                 >
                   <X className="w-5 h-5" />
@@ -183,7 +176,7 @@ export default function Navbar({ onOpenEnquiry }) {
                       key={item.path}
                       to={item.path}
                       onClick={() => setMobileMenuOpen(false)}
-                      className={`flex items-center justify-between px-4 py-3 rounded-xl text-base font-medium transition-colors ${
+                      className={`flex items-center justify-between px-4 py-3 rounded-xl text-base font-medium transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#D49B28] ${
                         active
                           ? 'bg-[#183D32] text-[#D49B28] font-semibold border-l-4 border-[#D49B28]'
                           : 'text-[#E3EADF] hover:bg-[#183D32]/50 hover:text-white'
@@ -202,7 +195,7 @@ export default function Navbar({ onOpenEnquiry }) {
                     setMobileMenuOpen(false);
                     if (onOpenEnquiry) onOpenEnquiry('Mobile Wholesale Button');
                   }}
-                  className="w-full py-3.5 px-4 rounded-xl bg-[#D49B28] text-[#102B23] font-bold text-sm uppercase tracking-wider flex items-center justify-center gap-2 shadow-md cursor-pointer"
+                  className="w-full py-3.5 px-4 rounded-xl bg-[#D49B28] text-[#102B23] font-bold text-sm uppercase tracking-wider flex items-center justify-center gap-2 shadow-md cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
                 >
                   <span>Wholesale Enquiry</span>
                   <ArrowUpRight className="w-4 h-4" />

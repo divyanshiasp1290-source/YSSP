@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Droplets, ShieldCheck, Mail, Phone, MapPin, ArrowRight } from 'lucide-react';
+import { Mail, Phone, MapPin, ArrowRight } from 'lucide-react';
 import { BRAND_INFO } from '../data/honeyData';
 
 export default function Footer({ onOpenEnquiry }) {
@@ -20,37 +20,25 @@ export default function Footer({ onOpenEnquiry }) {
                 />
               </div>
               <div>
-                <h3 className="text-3xl font-bold text-white tracking-tight">
+                <p className="text-3xl font-bold text-white tracking-tight">
                   YSSP
-                </h3>
+                </p>
                 <p className="text-sm text-[#D49B28] font-medium tracking-wide">
                   Yellow Sapphire Strategic Partners Pty Ltd
                 </p>
               </div>
             </div>
 
-            <p className="text-sm sm:text-base text-[#E3EADF]/90 leading-relaxed font-light">
-              Supplying 100% pure, unpasteurised, chemical-free Australian honey directly from native forest sanctuaries. Never heated, never blended with syrups, and bottled in clean glass jars and food-grade pails.
+            <p className="text-sm sm:text-base text-[#E3EADF]/95 leading-relaxed font-normal">
+              Supplying pure, unpasteurised, unblended raw Australian honey directly from native forest sanctuaries. Never heated, never blended with syrups, and bottled in clean glass jars and food-grade pails.
             </p>
-
-            <div className="pt-2 flex flex-wrap gap-2 text-xs">
-              <span className="px-3 py-1 rounded-full bg-[#183D32] border border-[#295F50] text-stone-200">
-                100% Raw &amp; Unheated
-              </span>
-              <span className="px-3 py-1 rounded-full bg-[#183D32] border border-[#295F50] text-stone-200">
-                Zero Added Sugar
-              </span>
-              <span className="px-3 py-1 rounded-full bg-[#183D32] border border-[#295F50] text-stone-200">
-                Glass &amp; Bulk Pails
-              </span>
-            </div>
           </div>
 
           {/* Column 2: Navigation Links (2.5 Cols) */}
           <div className="lg:col-span-2 space-y-3">
-            <h4 className="text-sm font-bold uppercase tracking-wider text-[#D49B28]">
+            <h2 className="text-sm font-bold uppercase tracking-wider text-[#D49B28]">
               Quick Links
-            </h4>
+            </h2>
             <ul className="space-y-2.5 text-sm sm:text-base text-[#E3EADF]/85">
               <li>
                 <Link to="/" className="hover:text-[#D49B28] transition-colors">Home</Link>
@@ -75,9 +63,9 @@ export default function Footer({ onOpenEnquiry }) {
 
           {/* Column 3: Honey Varieties (3 Cols) */}
           <div className="lg:col-span-3 space-y-3">
-            <h4 className="text-sm font-bold uppercase tracking-wider text-[#D49B28]">
+            <h2 className="text-sm font-bold uppercase tracking-wider text-[#D49B28]">
               Our Honey
-            </h4>
+            </h2>
             <ul className="space-y-2.5 text-sm sm:text-base text-[#E3EADF]/85">
               <li>
                 <Link to="/products/wild-forest-honey" className="hover:text-[#D49B28] transition-colors">
@@ -109,9 +97,9 @@ export default function Footer({ onOpenEnquiry }) {
 
           {/* Column 4: Sydney Contact (3 Cols) */}
           <div className="lg:col-span-3 space-y-4">
-            <h4 className="text-sm font-bold uppercase tracking-wider text-[#D49B28]">
+            <h2 className="text-sm font-bold uppercase tracking-wider text-[#D49B28]">
               Sydney Headquarters
-            </h4>
+            </h2>
             <div className="space-y-2.5 text-sm sm:text-base text-[#E3EADF]/85">
               <div className="flex items-start gap-2.5">
                 <MapPin className="w-5 h-5 text-[#D49B28] shrink-0 mt-0.5" />
@@ -142,12 +130,12 @@ export default function Footer({ onOpenEnquiry }) {
         </div>
 
         {/* Legal Disclaimer & Copyright */}
-        <div className="mt-12 pt-6 border-t border-[#1F4C3F]/60 flex flex-col sm:flex-row items-center justify-between text-xs text-[#E3EADF]/60 gap-4">
+        <div className="mt-12 pt-6 border-t border-[#1F4C3F]/60 flex flex-col sm:flex-row items-center justify-between text-xs sm:text-sm text-[#E3EADF]/85 gap-4">
           <p>© {new Date().getFullYear()} {BRAND_INFO.legalName}. All rights reserved.</p>
           <div className="flex items-center gap-4">
             <span>100% Pure Australian Honey</span>
             <span>•</span>
-            <span>FSANZ Standard 2.8.2 Compliant</span>
+            <span>FSANZ Standard 2.8.2 Alignment</span>
           </div>
         </div>
       </div>

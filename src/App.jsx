@@ -1,9 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import EnquiryModal from './components/EnquiryModal';
-import WordPressBlockReference from './components/WordPressBlockReference';
+
+const DevWordPressBlockReference = import.meta.env.DEV
+  ? lazy(() => import('./components/WordPressBlockReference'))
+  : null;
 
 // Pages
 import Home from './pages/Home';
@@ -78,8 +81,12 @@ export default function App() {
           defaultType={enquiryType}
         />
 
-        {/* WordPress Kadence / Gutenberg Block Architecture Blueprint */}
-        <WordPressBlockReference />
+        {/* Internal WordPress Kadence / Gutenberg Block Architecture Blueprint (development builds only) */}
+        {import.meta.env.DEV && DevWordPressBlockReference && (
+          <Suspense fallback={null}>
+            <DevWordPressBlockReference />
+          </Suspense>
+        )}
       </div>
     </Router>
   );

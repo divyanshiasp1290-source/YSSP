@@ -1,5 +1,5 @@
-import React, { useState, useRef, useEffect, useCallback } from 'react';
-import { ChevronUp, ChevronDown, Sparkles, ArrowRight, ArrowLeft } from 'lucide-react';
+import React, { useState, useRef, useCallback } from 'react';
+import { ChevronUp, ChevronDown } from 'lucide-react';
 
 /**
  * InshortsVerticalDeck
@@ -10,9 +10,7 @@ import { ChevronUp, ChevronDown, Sparkles, ArrowRight, ArrowLeft } from 'lucide-
 export default function InshortsVerticalDeck({
   cards = [],
   sectionTitle = "How We Work",
-  sectionSubtitle = "Four-Stage Supply Process",
   renderCard,
-  theme = "forest", // "forest" | "ivory"
   onCardChange
 }) {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -174,7 +172,7 @@ export default function InshortsVerticalDeck({
       </div>
 
       {/* Bottom Inshorts-style Swipe Prompt */}
-      <div className="mt-3 flex items-center justify-between text-xs px-2 text-stone-500">
+      <div className="mt-3 flex items-center justify-between text-xs px-2 text-stone-600">
         <div className="flex items-center gap-1.5">
           <span className="w-2 h-2 rounded-full bg-[#C99A35] animate-ping"></span>
           <span className="text-[11px] font-medium">

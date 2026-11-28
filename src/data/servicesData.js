@@ -25,7 +25,7 @@ export const SERVICES_DATA = [
       },
       {
         name: "Organic & Health Food Stores",
-        desc: "Retailers requiring raw, unheated honey free from artificial syrups, corn syrup, and pesticides."
+        desc: "Retailers seeking raw, unheated honey without artificial syrups or corn syrup."
       },
       {
         name: "Artisanal Cheese & Farm Shops",
@@ -163,21 +163,21 @@ export const SERVICES_DATA = [
     ],
     minimumOrder: "1 standard pallet (64 x 14kg pails, 32 x 28kg pails, or 4 x 300kg drums) or 1 full IBC tote.",
     keyFeatures: [
-      "Guaranteed 100% Australian Origin – Harvested from verified regional apiaries",
-      "Zero C3 / C4 adulteration or corn syrup dilution",
-      "Comprehensive Certificate of Analysis (COA) provided with every batch",
+      "Australian Regional Origin – Sourced from partner regional apiaries",
+      "Prepared without added C3/C4 syrups or corn syrup dilution",
+      "Batch Certificate of Analysis (COA) documentation available on request (subject to company confirmation)",
       "Integrated butterfly discharge valve on IBCs for automated pumping line tie-in"
     ],
     serviceProcess: [
       {
         step: "01",
         title: "Technical Spec Matching",
-        desc: "Share your target Brix (min 80°), maximum moisture (<18%), and color spectrum requirements with our team."
+        desc: "Share your target Brix, moisture, and colour spectrum requirements with our team (specifications subject to batch availability and company confirmation)."
       },
       {
         step: "02",
         title: "Batch COA & Sample Approval",
-        desc: "We supply laboratory testing certificates confirming chemical purity and provide bench-test bulk samples."
+        desc: "We coordinate available batch specifications and evaluation samples upon request (subject to company confirmation)."
       },
       {
         step: "03",
@@ -193,7 +193,7 @@ export const SERVICES_DATA = [
     faqs: [
       {
         q: "What testing data is supplied with each bulk delivery?",
-        a: "Every batch is dispatched with a Certificate of Analysis (COA) detailing moisture percentage, Brix rating, HMF levels, diastase activity, and C3/C4 isotopic analysis."
+        a: "Batch Certificate of Analysis (COA) parameters—such as moisture, Brix, HMF, diastase, and C3/C4 screening where tested—are provided upon request and subject to company confirmation per consignment."
       },
       {
         q: "How should bulk pails and drums be stored in a factory setting?",
@@ -201,22 +201,22 @@ export const SERVICES_DATA = [
       },
       {
         q: "Do you support recurring standing monthly bulk supply contracts?",
-        a: "Yes, we structure quarterly and annual supply agreements with guaranteed volume allocations and fixed pricing schedules for manufacturing continuity."
+        a: "Yes, quarterly and annual supply arrangements with scheduled volume allocations and pricing terms can be discussed with our Sydney trade desk (subject to company confirmation)."
       }
     ]
   },
   {
     id: "honey-export",
     title: "Honey Export",
-    subtitle: "FCL Container Loads & Phytosanitary Certified Overseas Dispatch",
+    subtitle: "FCL Container Loads & Export Documentation Support",
     category: "export-contract",
     categoryLabel: "International Trade",
     badge: "Global Export Desk",
     icon: "Globe2",
     image: "/images/sourcing-apiary.jpg",
     secondaryImage: "/images/product-bulk-pails.jpg",
-    shortOverview: "Complete turnkey export supply of 100% pure Australian honey in 20ft Full Container Loads (FCL) or palletised consignments, fully supported by export documentation and international biosecurity compliance.",
-    fullDescription: "Australian honey is globally celebrated for its unmatched purity, disease-free bee populations, and pristine bushland harvesting conditions. YSSP operates a dedicated Honey Export desk that manages end-to-end international trade logistics from our Sydney hub through Port Botany.\n\nWe provide overseas importers, supermarket chains, and food ingredient buyers with 100% authentic Australian raw honey in export-grade packaging. Our team coordinates all documentation, including Australian Department of Agriculture biosecurity requirements, Certificates of Origin, Certificate of Analysis (COA), Phytosanitary certificates, and consular legalization where required.",
+    shortOverview: "Turnkey export supply of pure Australian honey in 20ft Full Container Loads (FCL) or palletised consignments, with export documentation coordinated per shipment subject to destination requirements.",
+    fullDescription: "Australian honey is recognised globally for its floral diversity and pristine bushland harvesting conditions. YSSP operates a dedicated Honey Export desk that coordinates international trade logistics from our Sydney hub through Port Botany.\n\nWe work with overseas importers, supermarket chains, and food ingredient buyers seeking Australian raw honey in export-grade packaging. Our team assists with export documentation—including biosecurity paperwork, Certificates of Origin, Certificate of Analysis (COA), Phytosanitary certificates, and consular legalization where required—subject to destination regulations and company confirmation.",
     targetCustomers: [
       {
         name: "Overseas Food & Beverage Importers",
@@ -260,10 +260,10 @@ export const SERVICES_DATA = [
     ],
     minimumOrder: "1 full 20ft container (approx. 19–22 tonnes net) for sea freight; LCL palletised air freight available for sample verification and urgent consignments.",
     keyFeatures: [
-      "100% Australian Harvest Guaranteed – Zero foreign honey blending",
-      "Full export documentation (COA, Certificate of Origin, Phytosanitary, Bill of Lading)",
-      "Port Botany, Sydney dispatch with direct shipping lines to major global ports",
-      "Strict moisture-barrier container wrapping and desiccant placement for ocean transit"
+      "Single-Origin Australian Honey – No foreign honey blending",
+      "Export documentation (COA, Certificate of Origin, Phytosanitary, Bill of Lading) coordinated per shipment subject to destination requirements",
+      "Port Botany, Sydney dispatch coordination with shipping lines to international ports",
+      "Moisture-barrier container wrapping and desiccant placement for ocean transit"
     ],
     serviceProcess: [
       {
@@ -359,7 +359,7 @@ export const SERVICES_DATA = [
     keyFeatures: [
       "100% Pure, Unadulterated Australian Honey – Wild Forest, Eucalyptus, or Blossom",
       "Cold gravity-settled filling preserves natural active enzymes and aroma",
-      "Full regulatory label review ensuring compliance with Australian FSANZ or international packaging standards",
+      "Label specification support aligned with FSANZ Standard 2.8.2 or destination packaging guidelines (final regulatory sign-off subject to company confirmation)",
       "Batch coding, tamper-evident seals, and protective export carton packing"
     ],
     serviceProcess: [
@@ -395,7 +395,7 @@ export const SERVICES_DATA = [
       },
       {
         q: "How long does a private label production cycle take from approval?",
-        a: "Standard initial turnaround is 3 to 5 weeks from artwork approval and component receipt; repeat production runs are dispatched within 7 to 10 business days."
+        a: "Production turnaround and dispatch lead times are confirmed per project following artwork approval and packaging component receipt (subject to company confirmation)."
       }
     ]
   },
@@ -492,7 +492,7 @@ export const SERVICES_DATA = [
       },
       {
         q: "Can we set up a direct commercial wholesale account with 30-day payment terms?",
-        a: "Yes, verified Australian hospitality venues with active ABNs can apply for commercial credit accounts following credit approval."
+        a: "Commercial trading terms and account arrangements for Australian hospitality venues with active ABNs are subject to company confirmation and approval."
       }
     ]
   },
@@ -515,7 +515,7 @@ export const SERVICES_DATA = [
       },
       {
         name: "Health & Functional Food Innovators",
-        desc: "Producers crafting bioactive lozenges, throat syrups, and energy gels needing certified raw unheated honey."
+        desc: "Producers crafting lozenges, syrups, and energy gels seeking raw unheated honey."
       },
       {
         name: "Specialty Confectioners & Chocolatiers",
@@ -552,25 +552,25 @@ export const SERVICES_DATA = [
     minimumOrder: "Custom supply solutions typically commence from 2 to 3 pallets, or dedicated batch reservations from 5 tonnes upwards.",
     keyFeatures: [
       "Custom floral selection (Yellow Box, Red Gum, Stringybark, Wildflower)",
-      "Laboratory-verified chemical and isotopic authenticity testing",
-      "Dedicated Sydney warehouse storage with scheduled just-in-time dispatch",
+      "Batch specification and COA documentation available per consignment (subject to company confirmation)",
+      "Dedicated Sydney warehouse storage coordination with scheduled call-offs (subject to agreement)",
       "Direct technical consultation with our commercial honey specialists"
     ],
     serviceProcess: [
       {
         step: "01",
         title: "Technical Discovery Call",
-        desc: "Define your technical parameters: target moisture %, Brix, aroma, viscosity, and desired delivery schedule."
+        desc: "Define your target parameters: moisture %, Brix, aroma, viscosity, and desired delivery schedule."
       },
       {
         step: "02",
         title: "Apiary Selection & Bench Testing",
-        desc: "We screen apiary reserve batches and provide analytical test data alongside physical lab samples."
+        desc: "We screen reserve batches and coordinate evaluation data alongside physical bench samples."
       },
       {
         step: "03",
         title: "Supply Agreement & Batch Reserve",
-        desc: "Formalize volume commitments with guaranteed price stability and reserved lot allocations."
+        desc: "Formalize volume commitments with agreed pricing schedules and reserved lot allocations (subject to contract confirmation)."
       },
       {
         step: "04",
@@ -607,8 +607,8 @@ export const COMMERCIAL_CAPABILITIES = [
     icon: "Droplets"
   },
   {
-    title: "Batch Testing & Full COA",
-    desc: "Every commercial consignment is accompanied by a Certificate of Analysis confirming Brix level, moisture percentage, and purity standards.",
+    title: "Batch Testing & COA Availability",
+    desc: "Commercial consignments can be accompanied by Batch Certificate of Analysis (COA) documentation upon request, subject to company confirmation.",
     icon: "FileCheck2"
   },
   {

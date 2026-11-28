@@ -2,11 +2,11 @@ export const BRAND_INFO = {
   companyName: "YSSP",
   legalName: "Yellow Sapphire Strategic Partners Pty Ltd",
   tagline: "Yellow Sapphire Strategic Partners Pty Ltd",
-  description: "100% pure, unpasteurised, and chemical-free Australian honey. Never heated above hive temperature, rich in natural pollen, and bottled in clean glass jars and food-grade wholesale pails.",
+  description: "Pure, unpasteurised, unblended raw Australian honey. Never heated above hive temperature, retaining natural pollen, and bottled in clean glass jars and food-grade wholesale pails.",
   headquarters: "Sydney, New South Wales, Australia",
   address: "Suite 402, 115 Pitt Street, Sydney NSW 2000, Australia",
   emails: {
-    general: "enquiries@ysspartners.com",
+    general: "wholesale@ysspartners.com",
     wholesale: "wholesale@ysspartners.com"
   },
   phones: {
@@ -134,8 +134,8 @@ export const HONEY_PRODUCTS = [
     description: "Calibrated 100% pure Australian honey supplied in heavy-duty food-grade 14kg (10L) and 28kg (20L) buckets, 300kg lined steel export drums, and 1,400kg IBC totes for commercial bakeries, food processors, and wholesale packers.",
     packSizes: ["14kg Food-Grade Pail (~10L)", "28kg Food-Grade Pail (~20L)", "300kg Lined Steel Drum", "1,400kg / 1,000L IBC Tote"],
     highlights: [
-      "100% Australian Harvest Guaranteed",
-      "Zero C4 Syrups or Artificial Sugars",
+      "100% Australian Harvest Origin",
+      "No Added C4 Syrups or Artificial Sugars",
       "Tamper-Evident Lids with Wire Handles",
       "Pallet (64 Pails) to Full 20ft Container Loads"
     ],
@@ -157,9 +157,9 @@ export const HOW_WE_WORK_SIMPLE = [
   },
   {
     step: "02",
-    tag: "Purity Testing",
+    tag: "Purity Handling",
     title: "Cold Gravity Settling",
-    desc: "Coarsely strained below 40°C hive warmth. Verified 100% pure with zero added syrups, preserving natural living enzymes."
+    desc: "Coarsely strained below 40°C hive warmth without added syrups to preserve natural pollen and enzyme character."
   },
   {
     step: "03",
@@ -185,7 +185,7 @@ export const WHY_CHOOSE_US_SIMPLE = [
   {
     num: "02",
     title: "Zero Added Sugars",
-    desc: "Guaranteed 100% authentic honey. Free from corn syrup, rice syrup, invert sugar, or artificial flavorings.",
+    desc: "Pure floral honey prepared without corn syrup, rice syrup, invert sugar, or artificial flavourings.",
     icon: "ShieldCheck"
   },
   {
@@ -197,7 +197,7 @@ export const WHY_CHOOSE_US_SIMPLE = [
   {
     num: "04",
     title: "Direct Apiary Traceability",
-    desc: "Harvested directly by ethical beekeepers across clean Australian bushland with verified batch origin.",
+    desc: "Harvested by regional Australian beekeeping partners with batch origin records available on request.",
     icon: "Compass"
   }
 ];
@@ -257,11 +257,11 @@ export const HERO_SLIDES = [
   },
   {
     id: "slide-2",
-    tag: "CERTIFIED PURITY • ZERO ADULTERATION",
-    title: "Raw Organic Honey Free From C3 – C4 Sugars.",
-    desc: "Guaranteed 100% authentic Australian single-origin floral nectar. Extracted without industrial heat pasteurization, completely free from corn syrup, rice syrup, and artificial additives.",
+    tag: "PURE ORIGIN • UNBLENDED HONEY",
+    title: "Raw Australian Honey Without Added Syrups.",
+    desc: "Single-origin Australian floral nectar extracted without industrial heat pasteurisation, corn syrup, rice syrup, or artificial additives.",
     image: "/images/product-eucalyptus.jpg",
-    badge: "C3-C4 Free • Pure Origin",
+    badge: "Unheated • Pure Origin",
     ctaPrimary: "View Purity Standards",
     ctaSecondary: "Request Batch COA"
   },

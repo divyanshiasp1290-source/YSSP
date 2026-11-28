@@ -1,8 +1,17 @@
-import React, { useState } from 'react';
-import { Layers, ChevronDown, ChevronUp, Check, ExternalLink, X } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { Layers, X } from 'lucide-react';
 
 export default function WordPressBlockReference() {
   const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    if (!isOpen) return;
+    const onKeyDown = (e) => {
+      if (e.key === 'Escape') setIsOpen(false);
+    };
+    document.addEventListener('keydown', onKeyDown);
+    return () => document.removeEventListener('keydown', onKeyDown);
+  }, [isOpen]);
 
   return (
     <>
@@ -27,13 +36,18 @@ export default function WordPressBlockReference() {
           />
 
           <div className="flex min-h-full items-center justify-center p-4">
-            <div className="relative transform overflow-hidden rounded-2xl bg-[#F8F5EC] text-left shadow-2xl transition-all sm:my-8 sm:w-full sm:max-w-2xl border border-[#C99A35]/40">
+            <div
+              role="dialog"
+              aria-modal="true"
+              aria-labelledby="wp-blueprint-title"
+              className="relative transform overflow-hidden rounded-2xl bg-[#F8F5EC] text-left shadow-2xl transition-all sm:my-8 sm:w-full sm:max-w-2xl border border-[#C99A35]/40"
+            >
               {/* Header */}
               <div className="bg-[#183D32] px-6 py-4 text-white flex items-center justify-between border-b border-[#295F50]">
                 <div className="flex items-center gap-2.5">
                   <Layers className="w-5 h-5 text-[#C99A35]" />
                   <div>
-                    <h3 className="font-serif text-xl font-bold text-white">
+                    <h3 id="wp-blueprint-title" className="font-serif text-xl font-bold text-white">
                       WordPress Gutenberg / Kadence Architecture Blueprint
                     </h3>
                     <p className="text-[11px] text-[#C99A35]">
@@ -42,8 +56,10 @@ export default function WordPressBlockReference() {
                   </div>
                 </div>
                 <button
+                  type="button"
+                  aria-label="Close blueprint"
                   onClick={() => setIsOpen(false)}
-                  className="p-1 rounded-md text-stone-300 hover:text-white hover:bg-[#295F50]"
+                  className="p-1 rounded-md text-stone-300 hover:text-white hover:bg-[#295F50] cursor-pointer"
                 >
                   <X className="w-5 h-5" />
                 </button>

@@ -58,7 +58,7 @@ export default function HorizontalSwipeCarousel({
         <div className="flex items-end justify-between mb-6 px-1">
           <div>
             {subtitle && (
-              <p className="text-xs font-bold uppercase tracking-widest text-[#C99A35] mb-1">
+              <p className="text-xs font-bold uppercase tracking-widest text-[#8E620F] mb-1">
                 {subtitle}
               </p>
             )}
@@ -118,7 +118,7 @@ export default function HorizontalSwipeCarousel({
       </div>
 
       {/* Bottom Pagination Dots & Swipe Tip */}
-      <div className="flex items-center justify-between px-2 pt-1 text-xs text-stone-500">
+      <div className="flex items-center justify-between px-2 pt-1 text-xs text-stone-600">
         <span className="text-[11px] sm:hidden text-stone-600 font-medium">
           ← Swipe horizontally to explore →
         </span>
